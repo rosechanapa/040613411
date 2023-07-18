@@ -1,0 +1,97 @@
+html, body {
+    background-color: #fefefa;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    background-color: #889E92;
+}
+
+.menu {
+    color: #fefefa;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.image {
+    border-radius: 5%;
+    width: 55%;
+    margin: auto auto;
+    padding-top: 20px;
+    display: block;
+}
+
+.text {
+    font-family: 'Kanit', sans-serif;
+    margin: auto;
+    color: #31343a;
+    padding: 15px;
+    text-indent: 20px;
+    letter-spacing: 1px;
+}
+
+.topic {
+    font-family: 'Kanit', sans-serif;
+    color: #31343a;
+    padding: 10px;
+
+    text-shadow: #cfdcc8 0.1em 0em 0.1em;
+}
+.flexbox {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    display: block;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+
+    flex-basis: 24%;
+    text-align: left;
+
+    position: relative;
+
+    
+}
+
+.item img {
+    border-radius: 6%;
+    width: 100%;
+    box-shadow: 5px 6px 5px #889E92;
+}
+
+.Name {
+    color: #fefefa;
+    background-color: #8aa97a;
+    font-size: 18px;
+    padding: 8px 10px;
+    position: absolute;
+    bottom: 11px;
+    right: 25px;
+    border-radius: 10%;
+
+    box-shadow: 2px 2px 5px #fefefa;
+}
+
+
+.text-bottom {
+    font-family: 'Kanit', sans-serif;
+    margin: auto;
+    color: #fefefa;
+    padding: 15px;
+}
+
+.Bottom {
+    background-color: #889E92;
+    padding: 15px;
+    text-align: center;
+}
