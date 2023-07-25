@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form Exercise</title>
+
+    <style>
+        table, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="home.html"> 
+        <h1>เข้าสู่ระบบ</h1>
+        <table>
+            <tr>
+                <td>Username</td> <td><input type="text" name="username" autofocus required></td>
+            </tr>
+            <tr>
+                <td>Password</td> <td><input type="text" name="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">กรุณาพิมพ์ตามตัวเลขที่ปรากฎ:<br>1559 <br> 
+                    <input type="text" name="number" pattern="1559" required>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <button type="submit" name="login">
+            <img src="./pngwing.com.png" width="80px">
+        </button>
+    </form>
+</body>
+</html>

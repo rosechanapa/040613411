@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        1. ชื่อเต็ม/ย่อของสาขาวิชา <br>
+        <input type="text" name="major" id="major"> <br>
+
+        2. จำนวนเงินที่จะโอน <br>
+        <input type="number" name="money" id="money"> <br>
+
+
+        3. อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย <br>
+        <textarea name="food" id="food" cols="30" rows="5"></textarea> <br>
+
+
+        4. ค่าไฟฟ้า 3 เดือนที่ผ่านมา <br>
+        เดือนที่1: <input type="number" name="month1" id="m1"><br>
+        เดือนที่2: <input type="number" name="month2" id="m2"><br>
+        เดือนที่3: <input type="number" name="month3" id="m3"><br>
+
+
+        5. รหัสบัตรประชาชน <br>
+        <input type="text" name="ID" id="ID"> <br>
+
+
+        6. ความพึงพอใจของหนังสือเล่มนี้<br>
+        <label>
+            <input type="radio" name="star" value="5" checked="checked"> 5
+            <input type="radio" name="star" value="4"> 4
+            <input type="radio" name="star" value="4"> 3
+            <input type="radio" name="star" value="4"> 2
+            <input type="radio" name="star" value="4"> 1
+        </label> <br>
+
+
+        7. อาการป่วย <br>
+        <textarea name="sick" id="sick" cols="30" rows="5"></textarea> <br>
+
+
+        8. ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ <br>
+        <label>
+        <input type="checkbox" name="vaccine" value="Do" checked="checked">เคยได้รับ
+        <input type="checkbox" name="vaccine" value="Not">ไม่เคยได้รับ
+        </label> <br>
+
+
+        9. รหัสผ่าน <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass">
+        <br>
+
+        10. เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน <br>
+        <input type="time" name="start" id="start" 
+            min="08.00" max="21.00" required
+        >
+        -
+        <input type="time" name="end" id="end"
+            min="08.00" max="21.00" required
+        >
+        <br>
+
+        11. วันเวลาที่ต้องไปพบแพทย์ <br>
+        <input type="datetime-local" name="meet" id="meet">
+        <br><br>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
