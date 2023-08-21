@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+     
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student= [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18, 
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 3,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            //add
+            {
+                fullname: 'นางสาวนอนดี อยู่ดี',
+                age: 21,
+                year: 3,
+                gpa: 2.75,
+                help: false
+            },
+            {
+                fullname: 'นายกินดี มีสุข',
+                age: 18,
+                year: 1,
+                gpa: 3.20,
+                help: false
+            },
+            {
+                fullname: 'นางสาวอยู่ดี กินดี',
+                age: 19,
+                year: 1,
+                gpa: 2.85,
+                help: true
+            }
+        ];
+
+        let i, y;
+        let n= student.length;
+
+        for(y= 1; y<5; y++){
+            let state= false;
+            console.log(`ชั้นปีที่ ${y}`)
+
+            for(i=0; i<n; i++){
+                if(y==student[i].year && student[i].gpa>=3.20){
+                    if(student[i].help== true){
+                        console.log(`${student[i].fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`)
+                        state= true
+                    }
+                    else{
+                        console.log(`${student[i].fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังไม่ได้ช่วยงานภาควิชา`)
+                        state= true
+                    }
+                }
+                else if(y==student[i].year && student[i].year>=2 && student[i].gpa>=2.75){
+                    if(student[i].help== true){
+                        console.log(`${student[i].fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`)
+                        state= true
+                    }
+                }
+            }
+            if(state== false){
+                console.log("ไม่มี")
+            }
+ 
+        }
+        
+    </script>
+</body>
+</html>
