@@ -17,7 +17,7 @@
         $stmt->bindParam(1, $_GET["username"]);
     
         if ($stmt->execute()) {
-            header("Location: list_member.php");
+            header("Location: workshop6,9.php");
             exit();
         } else {
             echo "เกิดข้อผิดพลาดในการลบผู้ใช้";
