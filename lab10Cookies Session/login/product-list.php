@@ -18,7 +18,7 @@
 
    if ($stmt->rowCount() > 0) {
     echo "<table border='1'>";
-    echo "<tr><th>รหัสสินค้า</th><th>ชื่อสินค้า</th><th>รายละเอียด</th><th>ราคา</th></tr>";
+    echo "<tr><th>รหัสสินค้า</th><th>ชื่อสินค้า</th><th>รายละเอียด</th><th>ราคา</th><th>สินค้าคงเหลือ</th></tr>";
 
     while ($row = $stmt->fetch()) {
         echo "<tr>";
@@ -26,6 +26,7 @@
         echo "<td>" . $row["pname"] . "</td>";
         echo "<td>" . $row["pdetail"] . "</td>";
         echo "<td>" . $row["price"] . "</td>";
+        echo "<td>" . $row["quantity"] . "</td>";
         echo "</tr>";
     }
 
