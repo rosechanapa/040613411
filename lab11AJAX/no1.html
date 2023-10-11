@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var xmlHttp;
+    
+        function send() {
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = showResult;
+    
+            var mango = document.getElementById("mango").value;
+            var som = document.getElementById("som").value;
+            var banana = document.getElementById("banana").value;
+            var url= "cal.php?mango=" + mango + "&som=" + som + "&banana=" + banana;
+           
+           xmlHttp.open("GET", url);
+           xmlHttp.send();   
+       }
+       function showResult() {
+           if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+               document.getElementById("result").innerHTML = xmlHttp.responseText;
+           }
+       }
+    </script>
+</head>
+<body>
+    <h1>บันทึกการขาย</h1>
+    มะม่วง กก.ละ 30 บาท ขายได้ <input type="number" id="mango"> กก. <br>
+    ส้ม กก.ละ 70 บาท ขายได้ <input type="number" id="som"> กก. <br>
+    กล้วย หวีละ 30 บาท ขายได้ <input type="number" id="banana" หวี onkeyup="send()"><br>
+     
+    <span id="result"></span>
+</body>
+</html>

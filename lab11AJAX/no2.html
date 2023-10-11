@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function send() {
+        request = new XMLHttpRequest();
+        request.onreadystatechange = showResult;
+        var username = document.getElementById("username").value;
+        var url= "search.php?username=" + username;
+        request.open("GET", url, true);
+        request.send(null);
+        }
+        function showResult() {
+        if (request.readyState == 4) {
+        if (request.status == 200)
+            document.getElementById("result").innerHTML = request.responseText;
+        }
+        }
+        </script>
+        </head>
+        <body>
+        <input type="text" id="username" onkeyup="send()">
+        <div id="result"></div>
+</html>
